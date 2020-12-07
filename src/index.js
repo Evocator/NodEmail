@@ -6,9 +6,9 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 app.use(require('./routes/index.js'))
-app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(application_root));
 
-app.get('/NodEmail/src/', function(req, res){
+app.get('/src', function(req, res){
     res.send("Hello from the 'test' URL");
 });
 
