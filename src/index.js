@@ -6,7 +6,9 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 app.use(require('./routes/index.js'))
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname,'public')));
+
+app.get('/src', function(req, res) {
 
 
 
