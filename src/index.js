@@ -6,10 +6,10 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 app.use(require('./routes/index.js'))
-app.use(express.static(path.join(__dirname + '/public')));
+app.use(express.static(path.join(__dirname,'public')));
 
-app.get('/src', function(req, res){
-    res.send("Hello from the 'test' URL");
+app.get('/NodEmail/', function(req, res) {
+  // do something here.
 });
 
 app.listen (3000,() => {
