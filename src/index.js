@@ -8,6 +8,10 @@ app.use(express.json());
 app.use(require('./routes/index.js'))
 app.use(express.static(path.join(__dirname,'public')));
 
+app.get('/src/', function(req, res){
+    res.send("Hello from the 'test' URL");
+});
+
 app.listen (3000,() => {
     console.log('Servidor en puerto 3000');
 });
